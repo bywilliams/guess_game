@@ -19,13 +19,13 @@ def start_game():
 
     while True:
 
-        print("------------ Jogo da Advinhação --------------")
-        print("Estou pensando em um número entre 0 e 9 ....")
-        print("Tentem adivinhar!")
+        print("------------ Guess Game --------------")
+        print("I'm thinking of a number between 0...9")
+        print("Try to guess!")
 
-        p1guess = int(input("Jogador 1º digite um numero: "))
-        p2guess = int(input("Jogador 2º digite um numero: "))
-        p3guess = int(input("Jogador 2º digite um numero: "))
+        p1guess = int(input("Player 1º enter a number: "))
+        p2guess = int(input("Player 2º enter a number: "))
+        p3guess = int(input("Player 3º enter a number: "))
         p1.number1 = p1guess
         p2.number2 = p2guess
         p3.number3 = p3guess
@@ -38,14 +38,14 @@ def start_game():
             p3is_right = True
 
         if p1is_right or p2is_right or p3is_right:
-            print(f" jogador um forneceu o palpite: {p1.number1}")
-            print(f" jogador dois forneceu o palpite: {p2.number2}")
-            print(f" jogador três forneceu o palpite: {p3.number3}")
-            print("Temos um vencedor!")
-            print(f"Numero a adivinhar: {targetNumber}")
-            print(f"O jogador um acertou? {p1is_right}")
-            print(f"O jogador dois acertou? {p2is_right}")
-            print(f"O jogador três acertou? {p3is_right}")
+            print(f" Player one tried to guess with the number: {p1.number1}")
+            print(f" Player two tried to guess with the number: {p2.number2}")
+            print(f" Player three tried to guess with the number: {p3.number3}")
+            print("We have a winner!")
+            print(f"Number to guess: {targetNumber}")
+            print(f"Did player one get it right? {p1is_right}")
+            print(f"Did player two get it right? {p2is_right}")
+            print(f"Did player three get it right? {p3is_right}")
             break
         else:
-            print("Os jogadores terão que tentar novamente, pois ninguém acertou! \n")
+            print("Players will have to try again, because no one got it right! \n")
