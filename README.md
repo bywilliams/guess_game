@@ -34,6 +34,12 @@ Variables:
     - p2 = player.Player => reference variable for player 2.
     - p3 = player.Player => reference variable for player 3.
     - targetNumber = variable to receive a random number that will be the number the CPU is thinking of.
+    - p1is_right = receives a boolean to confirm whether the player is correct or not.
+    - p2is_right = receives a boolean to confirm whether the player is correct or not.
+    - p3is_right = receives a boolean to confirm whether the player is correct or not.
+    - p1guess = receive a input in int form for the player
+    - p2guess = receive a input in int form for the player
+    - p3guess = receive a input in int form for the player
 * **Class Game_launcher**
     - game = GuessGame.start_game() = reference variable of the GuessGame type calling the start_game() method of the class.
 
@@ -95,41 +101,6 @@ def start_game():
 ~~~
 > This method was made to receive all the logic of the game in addition to receiving the loop in case no layer hit the number continue playing.
 
-##### Class Worker
-
-~~~java
-public void addContract(HourContract contract) {
-		contracts.add(contract);
-	}
-~~~
-
-> This method add a contract in a list (contracts)
-
-~~~java
-public void removeContract(HourContract contract) {
-		contracts.remove(contract);
-	}
-~~~
-
-> This method remove a contract in a list (contracts)
-
-~~~java
-public double income(Integer year, Integer month) {
-        double sum = baseSalary;
-        Calendar cal = Calendar.getInstance();
-        for (HourContract c : contracts) {
-            cal.setTime(c.getDate());	
-            int c_month = 1 + cal.get(Calendar.MONTH);
-            int c_year = cal.get(Calendar.YEAR);
-            if(month == c_month && year == c_year) {
-                sum += c.totalValue();
-            }
-        }
-        return sum;
-	}
-~~~
-
-> A method to calculate the sum of all contracts + the basic salary of the employee, given a month and year informed by the user.
 
 # Image of Application
 ![image da aplicação](images/guesspy.gif)
@@ -138,7 +109,7 @@ public double income(Integer year, Integer month) {
 
 Clone this repository in your local machine with the command:
 
-- git clone https://github.com/bywilliams/worker_program.git
+- git clone https://github.com/bywilliams/guess_game.git
 
 
 ## Author
